@@ -21,9 +21,33 @@ const sans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Alejandro Anchundia — Frontend Developer",
+  title: "Alejandro Anchundia — Frontend Developer & Web3 Developer",
   description:
-    "Portfolio de Alejandro Anchundia, frontend developer especializado en React, TypeScript y ecosistemas Web3. Explora proyectos reales, habilidades técnicas y experiencia en desarrollo de software. Contacto para colaboraciones y oportunidades laborales.",
+    "Portfolio profesional de Alejandro Anchundia, frontend developer especializado en React, TypeScript, Tailwind CSS y ecosistemas Web3 en Solana. Explora proyectos reales, habilidades técnicas y experiencia en desarrollo de software.",
+  keywords: [
+    "frontend developer", "web3 developer", "React", "TypeScript", "Tailwind CSS",
+    "Solana", "desarrollador web", "Ecuador", "Guayaquil", "portfolio",
+    "Alejandro Anchundia", "Next.js",
+  ],
+  authors: [{ name: "Alejandro Anchundia" }],
+  creator: "Alejandro Anchundia",
+  openGraph: {
+    title: "Alejandro Anchundia — Frontend Developer & Web3 Developer",
+    description:
+      "Portfolio profesional especializado en React, TypeScript y ecosistemas Web3 en Solana.",
+    url: "https://andia.dev",
+    siteName: "Alejandro Anchundia",
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alejandro Anchundia — Frontend Developer & Web3 Developer",
+    description:
+      "Portfolio profesional especializado en React, TypeScript y ecosistemas Web3 en Solana.",
+  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://andia.dev" },
 };
 
 export default function RootLayout({
@@ -36,6 +60,26 @@ export default function RootLayout({
       lang="es"
       className={`${serif.variable} ${mono.variable} ${sans.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Alejandro Anchundia",
+              url: "https://andia.dev",
+              jobTitle: "Frontend Developer & Web3 Developer",
+              knowsAbout: ["React", "TypeScript", "Tailwind CSS", "Solana", "Next.js"],
+              sameAs: [
+                "https://github.com/anchundiatech",
+                "https://www.linkedin.com/in/alejandro-anchundia/",
+                "https://x.com/alejo_dev1",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
