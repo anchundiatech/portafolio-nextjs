@@ -61,6 +61,7 @@ export default function RootLayout({
       className={`${serif.variable} ${mono.variable} ${sans.variable}`}
     >
       <head>
+        <meta name="google-site-verification" content="X5sJOVYux6OMzZ32Uubae-ch_V7-UmsO-U4oplPaSps" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
