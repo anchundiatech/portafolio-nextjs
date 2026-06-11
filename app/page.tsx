@@ -200,7 +200,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="hero-content" style={{ padding: "0 3rem", maxWidth: 1200, margin: "0 auto", width: "100%" }}>
+        <div className="hero-content">
           <h1 className="hero-name">
             Alejandro<br />
             <em className="hero-gradient-text">Anchundia</em>
