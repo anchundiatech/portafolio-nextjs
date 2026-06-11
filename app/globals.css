@@ -197,7 +197,7 @@ nav {
   z-index: 10;
   max-width: 640px;
   padding: 0 3rem;
-  margin: 0 auto;
+  margin-left: calc((100vw - 1200px) / 2);
   width: 100%;
   opacity: 0; transform: translateY(30px);
   animation: fadeUp .9s ease .1s forwards;
@@ -281,13 +281,15 @@ nav {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: .8;
-  mask-image: linear-gradient(to left, black 60%, transparent 100%),
-              linear-gradient(to top, black 70%, transparent 100%);
-  mask-composite: intersect;
-  -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%),
-                     linear-gradient(to top, black 70%, transparent 100%);
-  -webkit-mask-composite: source-in;
+  opacity: .85;
+  mix-blend-mode: multiply;
+  mask-image: radial-gradient(ellipse at 70% 50%, black 30%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at 70% 50%, black 30%, transparent 85%);
+}
+
+.light .hero-visual img {
+  mix-blend-mode: normal;
+  opacity: .95;
 }
 
 .hero-gradient-overlay {
@@ -614,7 +616,7 @@ footer a { color: var(--color-jun); text-decoration: none; }
 /*  RESPONSIVE  */
 @media (max-width: 1200px) {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-content { max-width: 520px; }
+  .hero-content { max-width: 520px; margin-left: 0; }
 }
 
 @media (max-width: 1024px) {
