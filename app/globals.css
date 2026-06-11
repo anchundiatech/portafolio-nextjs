@@ -375,7 +375,7 @@ nav {
 }
 .stack-icon.amber { color: var(--color-amber); }
 
-.ptag svg, .pctag svg {
+.tag-icon {
   display: inline; vertical-align: middle; margin-right: 4px;
 }
 
