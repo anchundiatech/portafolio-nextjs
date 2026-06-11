@@ -429,7 +429,7 @@ export default function Home() {
               <div className="pc-footer">
                 <span className="pc-badge">🩺 HealthTech</span>
                 <div className="project-links">
-                  <a className="plink" href="https://github.com/anchundiatech" target="_blank">GitHub ↗</a>
+                  <a className="plink" href="https://github.com/anchundiatech/MediLink-Frontend" target="_blank">GitHub ↗</a>
                 </div>
               </div>
             </div>
@@ -490,7 +490,7 @@ export default function Home() {
                   ● Live
                 </span>
                 <div className="project-links">
-                  <a className="plink" href="https://github.com/anchundiatech" target="_blank">GitHub ↗</a>
+                  <a className="plink" href="https://github.com/anchundiatech/i006-blackbox-fullstack-" target="_blank">GitHub ↗</a>
                 </div>
               </div>
             </div>
