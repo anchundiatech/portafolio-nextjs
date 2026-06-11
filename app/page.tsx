@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import {
   Code2, FileCode, Globe, Paintbrush, Smartphone, Database, Server,
   Lock, Zap, Coins, Link2, GitBranch, BarChart3, Brain, Hexagon, Anchor,
@@ -194,9 +195,12 @@ export default function Home() {
         <div className="hero-gradient-overlay" />
 
         <div className="hero-visual">
-          <img
+          <Image
             src="/unnamed.png"
             alt="Alejandro Anchundia"
+            fill
+            sizes="50vw"
+            priority
           />
         </div>
 
@@ -330,7 +334,13 @@ export default function Home() {
               }}
             >
               <div className="pc-img">
-                <img src="/proyects/EduPlaftorm.png" alt="EduPlatform" />
+                <Image
+                  src="/proyects/EduPlaftorm.png"
+                  alt="EduPlatform"
+                  width={600}
+                  height={412}
+                  loading="lazy"
+                />
               </div>
               <div className="pc-num">001</div>
               <div className="pc-title">EduPlatform</div>
@@ -359,7 +369,13 @@ export default function Home() {
               }}
             >
               <div className="pc-img">
-                <img src="/proyects/LatamLinkpay.png" alt="LatamLink Pay" />
+                <Image
+                  src="/proyects/LatamLinkpay.png"
+                  alt="LatamLink Pay"
+                  width={600}
+                  height={412}
+                  loading="lazy"
+                />
               </div>
               <div className="pc-num">002</div>
               <div className="pc-title">LatamLink Pay</div>
@@ -387,7 +403,13 @@ export default function Home() {
               }}
             >
                <div className="pc-img">
-                <img src="/proyects/gitmood.png" alt="GitMood" />
+                <Image
+                  src="/proyects/gitmood.png"
+                  alt="GitMood"
+                  width={600}
+                  height={412}
+                  loading="lazy"
+                />
               </div>
               <div className="pc-num">003</div>
               <div className="pc-title">GitMood</div>
@@ -414,7 +436,13 @@ export default function Home() {
               }}
             >
                <div className="pc-img">
-                <img src="/proyects/MediLink.png" alt="MediLink" />
+                <Image
+                  src="/proyects/MediLink.png"
+                  alt="MediLink"
+                  width={600}
+                  height={412}
+                  loading="lazy"
+                />
               </div>
               <div className="pc-num">004</div>
               <div className="pc-title">MediLink</div>
@@ -441,7 +469,13 @@ export default function Home() {
               }}
             >
                <div className="pc-img">
-                <img src="/proyects/Nexum.png" alt="LatamLink Pay" />
+                <Image
+                  src="/proyects/Nexum.png"
+                  alt="Nexum"
+                  width={600}
+                  height={412}
+                  loading="lazy"
+                />
               </div>
               <div className="pc-num">005</div>
               <div className="pc-title">Nexum</div>
@@ -469,7 +503,13 @@ export default function Home() {
               }}
             >
               <div className="pc-img">
-                <img src="/proyects/BlackBox.png" alt="BlackBox Fleet" />
+                <Image
+                  src="/proyects/BlackBox.png"
+                  alt="BlackBox Fleet"
+                  width={600}
+                  height={412}
+                  loading="lazy"
+                />
               </div>
               <div className="pc-num">006</div>
               <div className="pc-title">BlackBox Fleet</div>
