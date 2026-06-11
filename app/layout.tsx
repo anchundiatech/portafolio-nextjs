@@ -47,7 +47,13 @@ export const metadata: Metadata = {
       "Portfolio profesional especializado en React, TypeScript y ecosistemas Web3 en Solana.",
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://andia.dev" },
+  alternates: {
+    canonical: "https://andia.dev",
+    languages: {
+      "es-ES": "https://andia.dev",
+      "en-US": "https://andia.dev",
+    },
+  },
 };
 
 export default function RootLayout({
