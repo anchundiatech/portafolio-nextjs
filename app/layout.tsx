@@ -23,7 +23,7 @@ const sans = DM_Sans({
 export const metadata: Metadata = {
   title: "Alejandro Anchundia — Frontend Developer",
   description:
-    "Portfolio de Alejandro Anchundia, frontend developer especializado en React, TypeScript y ecosistemas Web3. Guayaquil, Ecuador.",
+    "Portfolio de Alejandro Anchundia, frontend developer especializado en React, TypeScript y ecosistemas Web3. Explora proyectos reales, habilidades técnicas y experiencia en desarrollo de software. Contacto para colaboraciones y oportunidades laborales.",
 };
 
 export default function RootLayout({
