@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, DM_Mono, DM_Sans } from "next/font/google";
 import "./globals.css";
+import {GoogleAnalytics} from "@next/third-parties/google-analytics";
+
 
 const serif = DM_Serif_Display({
   weight: ["400"],
@@ -88,6 +90,7 @@ export default function RootLayout({
         />
       </head>
       <body>{children}</body>
+      <googleAnalytics gaId="GTM-KHTLV2DC"
     </html>
   );
 }
