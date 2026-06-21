@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, DM_Mono, DM_Sans } from "next/font/google";
 import "./globals.css";
-import { GoogleTagManager } from "@next/third-parties/google-analytics";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 
 const serif = DM_Serif_Display({
