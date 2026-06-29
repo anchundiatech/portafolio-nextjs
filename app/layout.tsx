@@ -23,6 +23,9 @@ const sans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  icons: [
+    { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
+  ],
   title: "Alejandro Anchundia — Frontend Developer & Web3 Developer",
   description:
     "Portfolio profesional de Alejandro Anchundia, frontend developer especializado en React, TypeScript, Tailwind CSS y ecosistemas Web3 en Solana. Explora proyectos reales, habilidades técnicas y experiencia en desarrollo de software.",
