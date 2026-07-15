@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, DM_Mono, DM_Sans } from "next/font/google";
 import "./globals.css";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 
 const serif = DM_Serif_Display({
@@ -94,6 +94,7 @@ export default function RootLayout({
       </head>
       <body>{children}</body>
       <GoogleTagManager gtmId="GTM-KHTLV2DC" />
+      <GoogleAnalytics gaId="G-8SYE9NF1EG" />
     </html>
   );
 }
