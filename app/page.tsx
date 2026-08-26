@@ -65,7 +65,7 @@ const translations = {
     nav: { about: "about", projects: "projects", skills: "skills", contact: "contact" },
     hero: { desc: "I build interfaces that blend technical clarity with thoughtful user experience. Specialized in React, TypeScript and Web3 ecosystems.", cta: "View projects" },
     about: { title: "About me", stack: "Main stack", github: "GitHub", email: "Email",
-      p1: "I'm <strong>Armando Alejandro Anchundia Yela</strong>, frontend developer based in Guayaquil, Ecuador. I specialize in building digital products with React and TypeScript — from SaaS to Web3 protocols on Solana.",
+      p1: "I'm <strong>Armando Alejandro Anchundia Yela</strong>, frontend developer based in Orellana, Ecuador. I specialize in building digital products with React and TypeScript — from SaaS to Web3 protocols on Solana.",
       p2: "My approach combines <strong>technical clarity with functional design</strong>. I don't just write code that works, but interfaces people understand and enjoy using. Every project is an opportunity to improve both architecture and experience.",
       p3: "I'm currently developing <strong>LatamLink Pay</strong> — a stablecoin POS system on Solana for Latin American merchants, accepted into the Solana Latam Labs program.",
     },
