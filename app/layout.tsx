@@ -39,7 +39,7 @@ export function generateMetadata(): Metadata {
     description: DESCRIPTION,
     keywords: [
       "frontend developer", "web3 developer", "React", "TypeScript", "Tailwind CSS",
-      "Solana", "desarrollador web", "Ecuador", "Orellana", "Quito" "portfolio",
+      "Solana", "desarrollador web", "Ecuador", "Orellana", "Quito", "portfolio", "desarrollador de software",
       "Alejandro Anchundia", "Next.js",
     ],
     authors: [{ name: "Alejandro Anchundia", url: SITE_URL }],
