@@ -3,16 +3,49 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
-  Code2, FileCode, Globe, Paintbrush, Smartphone, Database, Server,
-  Lock, Zap, Coins, Link2, GitBranch, BarChart3, Brain, Hexagon, Anchor, Mail,
+  Code2,
+  FileCode,
+  Globe,
+  Paintbrush,
+  Smartphone,
+  Database,
+  Server,
+  Lock,
+  Zap,
+  Coins,
+  Link2,
+  GitBranch,
+  BarChart3,
+  Brain,
+  Hexagon,
+  Anchor,
+  Mail,
 } from "lucide-react";
 
-const techIcons: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
-  React: Code2, TypeScript: FileCode, "Next.js": Globe, "Tailwind CSS": Paintbrush,
-  Vite: Zap, "React Native": Smartphone, Solana: Coins, "Web3.js": Link2,
-  Supabase: Database, NestJS: Server, Gemini: Brain, Rust: Hexagon,
-  Anchor, PostgreSQL: Database, "JWT Auth": Lock, "GitHub API": GitBranch,
-  "Sentiment API": BarChart3, Expo: Globe, Web3: Coins, Tailwind: Paintbrush,
+const techIcons: Record<
+  string,
+  React.ComponentType<{ size?: number; className?: string }>
+> = {
+  React: Code2,
+  TypeScript: FileCode,
+  "Next.js": Globe,
+  "Tailwind CSS": Paintbrush,
+  Vite: Zap,
+  "React Native": Smartphone,
+  Solana: Coins,
+  "Web3.js": Link2,
+  Supabase: Database,
+  NestJS: Server,
+  Gemini: Brain,
+  Rust: Hexagon,
+  Anchor,
+  PostgreSQL: Database,
+  "JWT Auth": Lock,
+  "GitHub API": GitBranch,
+  "Sentiment API": BarChart3,
+  Expo: Globe,
+  Web3: Coins,
+  Tailwind: Paintbrush,
 };
 
 const roles = ["Frontend Developer", "Web3 Developer"];
@@ -48,32 +81,110 @@ function XIcon({ size = 16 }: { size?: number }) {
 
 const translations = {
   es: {
-    nav: { about: "sobre mí", projects: "proyectos", skills: "skills", contact: "contactar" },
-    hero: { desc: "Construyo interfaces que combinan claridad técnica con experiencia de usuario cuidada. Especializado en React, TypeScript y ecosistemas Web3.", cta: "Ver proyectos" },
-    about: { title: "Sobre mí", stack: "Stack principal", github: "GitHub", email: "Email",
-      p1: 'Soy <strong>Alejandro Anchundia </strong>, frontend developer y Web3 Developer. Me especializo en construir productos digitales con React y TypeScript — desde SaaS hasta protocolos Web3 en Solana.',
-      p2: 'Mi enfoque combina <strong>claridad técnica con diseño funcional</strong>. No solo escribo código que funciona, sino interfaces que las personas entienden y disfrutan usar. Cada proyecto es una oportunidad de mejorar tanto la arquitectura como la experiencia.',
-      p3: 'Actualmente estoy desarrollando <strong>LatamLink Pay</strong> — un sistema POS de stablecoins en Solana para comerciantes latinoamericanos, aceptado en el programa Solana Latam Labs.',
+    nav: {
+      about: "sobre mí",
+      projects: "proyectos",
+      skills: "skills",
+      contact: "contactar",
     },
-      projects: { title: "Proyectos", intro: "Una selección de proyectos reales — hackathons, productos en producción y exploración técnica.", desc1: "Plataforma e-learning con dashboards diferenciados por rol, sistema de autenticación completo y arquitectura REST. Ganador del primer lugar en hackathon de No Country.", desc2: "POS de stablecoins en Solana para comerciantes latinoamericanos. Aceptado en Solana Latam Labs.", desc3: "Análisis de sentimiento de commits de GitHub en tiempo real. Construido en solitario para hackathon midudev.", desc4: "SaaS de gestión de flotas con hooks personalizados, paginación avanzada y CI/CD en Vercel.", desc5: "Portal de salud para gestión moderna de citas y teleasistencia. Construido con React, Vite y Tailwind CSS.", desc6: "Protocolo de pagos descentralizado en Solana Devnet usando Anchor, Rust y Borsh en el frontend.", ver: "Ver" },
+    hero: {
+      desc: "Construyo interfaces que combinan claridad técnica con experiencia de usuario cuidada. Especializado en React, TypeScript y ecosistemas Web3.",
+      cta: "Ver proyectos",
+    },
+    about: {
+      title: "Sobre mí",
+      stack: "Stack principal",
+      github: "GitHub",
+      email: "Email",
+      p1: "Soy <strong>Alejandro Anchundia </strong>, frontend developer y Web3 Developer. Me especializo en construir productos digitales con React y TypeScript — desde SaaS hasta protocolos Web3 en Solana.",
+      p2: "Mi enfoque combina <strong>claridad técnica con diseño funcional</strong>. No solo escribo código que funciona, sino interfaces que las personas entienden y disfrutan usar. Cada proyecto es una oportunidad de mejorar tanto la arquitectura como la experiencia.",
+      p3: "Actualmente estoy desarrollando <strong>LatamLink Pay</strong> — un sistema POS de stablecoins en Solana para comerciantes latinoamericanos, aceptado en el programa Solana Latam Labs.",
+    },
+    projects: {
+      title: "Proyectos",
+      intro:
+        "Una selección de proyectos reales — hackathons, productos en producción y exploración técnica.",
+      desc1:
+        "Plataforma e-learning con dashboards diferenciados por rol, sistema de autenticación completo y arquitectura REST. Ganador del primer lugar en hackathon de No Country.",
+      desc2:
+        "POS de stablecoins en Solana para comerciantes latinoamericanos. Aceptado en Solana Latam Labs.",
+      desc3:
+        "Análisis de sentimiento de commits de GitHub en tiempo real. Construido en solitario para hackathon midudev.",
+      desc4:
+        "SaaS de gestión de flotas con hooks personalizados, paginación avanzada y CI/CD en Vercel.",
+      desc5:
+        "Portal de salud para gestión moderna de citas y teleasistencia. Construido con React, Vite y Tailwind CSS.",
+      desc6:
+        "Protocolo de pagos descentralizado en Solana Devnet usando Anchor, Rust y Borsh en el frontend.",
+      ver: "Ver",
+    },
     skills: { title: "Skills", frontend: "Frontend", web3: "Web3 & Backend" },
-    contact: { eyebrow: " · Contacto", title1: "¿Tienes un", title2: "proyecto", title3: "en mente?", desc: "Estoy abierto a roles full-time, freelance y colaboraciones en proyectos interesantes. Respondo en menos de 24 horas." },
-    footer: { phrase: "Cada línea de código es una oportunidad para construir algo que deje huella" },
-
+    contact: {
+      eyebrow: " · Contacto",
+      title1: "¿Tienes un",
+      title2: "proyecto",
+      title3: "en mente?",
+      desc: "Estoy abierto a roles full-time, freelance y colaboraciones en proyectos interesantes. Respondo en menos de 24 horas.",
+    },
+    footer: {
+      phrase:
+        "Cada línea de código es una oportunidad para construir algo que deje huella",
+    },
   },
   en: {
-    nav: { about: "about", projects: "projects", skills: "skills", contact: "contact" },
-    hero: { desc: "I build interfaces that blend technical clarity with thoughtful user experience. Specialized in React, TypeScript and Web3 ecosystems.", cta: "View projects" },
-    about: { title: "About me", stack: "Main stack", github: "GitHub", email: "Email",
+    nav: {
+      about: "about",
+      projects: "projects",
+      skills: "skills",
+      contact: "contact",
+    },
+    hero: {
+      desc: "I build interfaces that blend technical clarity with thoughtful user experience. Specialized in React, TypeScript and Web3 ecosystems.",
+      cta: "View projects",
+    },
+    about: {
+      title: "About me",
+      stack: "Main stack",
+      github: "GitHub",
+      email: "Email",
       p1: "I'm <strong>Armando Alejandro Anchundia Yela</strong>, frontend developer based in Orellana, Ecuador. I specialize in building digital products with React and TypeScript — from SaaS to Web3 protocols on Solana.",
       p2: "My approach combines <strong>technical clarity with functional design</strong>. I don't just write code that works, but interfaces people understand and enjoy using. Every project is an opportunity to improve both architecture and experience.",
       p3: "I'm currently developing <strong>LatamLink Pay</strong> — a stablecoin POS system on Solana for Latin American merchants, accepted into the Solana Latam Labs program.",
     },
-      projects: { title: "Projects", intro: "A selection of real projects — hackathons, production products and technical exploration.", desc1: "E-learning platform with role-based dashboards, full auth system and REST architecture. First place winner at No Country hackathon.", desc2: "Stablecoin POS on Solana for Latin American merchants. Accepted at Solana Latam Labs.", desc3: "Real-time GitHub commit sentiment analysis. Solo project for midudev hackathon.", desc4: "Fleet management SaaS with custom hooks, advanced pagination and CI/CD on Vercel.", desc5: "Health portal for modern appointment management and telemedicine. Built with React, Vite and Tailwind CSS.", desc6: "Decentralized payment protocol on Solana Devnet using Anchor, Rust and Nexjs on the frontend.", ver: "View" },
-    skills: { title: "Skills & Experience", frontend: "Frontend", web3: "Web3 & Backend" },
-    contact: { eyebrow: "04 · Contact", title1: "Have a", title2: "project", title3: "in mind?", desc: "I'm open to full-time roles, freelance and collaborations on interesting projects. I respond within 24 hours." },
-    footer: { phrase: "Every line of code is an opportunity to build something that leaves a mark" },
-
+    projects: {
+      title: "Projects",
+      intro:
+        "A selection of real projects — hackathons, production products and technical exploration.",
+      desc1:
+        "E-learning platform with role-based dashboards, full auth system and REST architecture. First place winner at No Country hackathon.",
+      desc2:
+        "Stablecoin POS on Solana for Latin American merchants. Accepted at Solana Latam Labs.",
+      desc3:
+        "Real-time GitHub commit sentiment analysis. Solo project for midudev hackathon.",
+      desc4:
+        "Fleet management SaaS with custom hooks, advanced pagination and CI/CD on Vercel.",
+      desc5:
+        "Health portal for modern appointment management and telemedicine. Built with React, Vite and Tailwind CSS.",
+      desc6:
+        "Decentralized payment protocol on Solana Devnet using Anchor, Rust and Nexjs on the frontend.",
+      ver: "View",
+    },
+    skills: {
+      title: "Skills & Experience",
+      frontend: "Frontend",
+      web3: "Web3 & Backend",
+    },
+    contact: {
+      eyebrow: "04 · Contact",
+      title1: "Have a",
+      title2: "project",
+      title3: "in mind?",
+      desc: "I'm open to full-time roles, freelance and collaborations on interesting projects. I respond within 24 hours.",
+    },
+    footer: {
+      phrase:
+        "Every line of code is an opportunity to build something that leaves a mark",
+    },
   },
 };
 
@@ -117,7 +228,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
@@ -139,7 +250,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
 
     cardEls.forEach((c) => {
@@ -206,16 +317,17 @@ export default function Home() {
 
         <div className="hero-content">
           <h1 className="hero-name">
-            Alejandro<br />
+            Alejandro
+            <br />
             <em className="hero-gradient-text">Anchundia</em>
           </h1>
           <div className="hero-role">
-            <span className="hero-role-text" key={roleIndex}>{roles[roleIndex]}</span>
+            <span className="hero-role-text" key={roleIndex}>
+              {roles[roleIndex]}
+            </span>
             <span className="hero-role-cursor">|</span>
           </div>
-          <p className="hero-desc">
-            {t.hero.desc}
-          </p>
+          <p className="hero-desc">{t.hero.desc}</p>
           <div className="hero-actions">
             <a href="#projects" className="btn-primary">
               {t.hero.cta}
@@ -235,7 +347,6 @@ export default function Home() {
       <div style={{ borderTop: "1px solid var(--color-border)" }}>
         <div className="section reveal" id="about">
           <div className="section-header">
-
             <h2 className="section-title">{t.about.title}</h2>
           </div>
 
@@ -259,7 +370,11 @@ export default function Home() {
                 >
                   Email
                 </a>
-                <a className="about-link" href="https://www.linkedin.com/in/alejandro-anchundia/" target="_blank">
+                <a
+                  className="about-link"
+                  href="https://www.linkedin.com/in/alejandro-anchundia/"
+                  target="_blank"
+                >
                   LinkedIn
                 </a>
               </div>
@@ -308,22 +423,19 @@ export default function Home() {
                   <Brain size={14} className="stack-icon amber" />
                   Gemini AI
                 </div>
-                </div>
-            </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
       {/* PROJECTS */}
       <div style={{ borderTop: "1px solid var(--color-border)" }}>
         <div className="section reveal" id="projects">
           <div className="section-header">
-
             <h2 className="section-title">{t.projects.title}</h2>
           </div>
-          <p className="projects-intro">
-            {t.projects.intro}
-          </p>
+          <p className="projects-intro">{t.projects.intro}</p>
 
           {/* Grid */}
           <div className="projects-grid">
@@ -344,20 +456,34 @@ export default function Home() {
               </div>
               <div className="pc-num">001</div>
               <div className="pc-title">EduPlatform</div>
-              <div className="pc-desc">
-                {t.projects.desc1}
-              </div>
+              <div className="pc-desc">{t.projects.desc1}</div>
               <div className="pc-stack">
-                <span className="pctag"><TechIcon name="React" size={11} /> React</span>
-                <span className="pctag"><TechIcon name="Tailwind CSS" size={11} /> Tailwind CSS</span>
-                <span className="pctag"><TechIcon name="NestJS" size={11} /> NestJS</span>
-                <span className="pctag"><TechIcon name="PostgreSQL" size={11} /> PostgreSQL</span>
-                <span className="pctag"><TechIcon name="JWT Auth" size={11} /> JWT Auth</span>
+                <span className="pctag">
+                  <TechIcon name="React" size={11} /> React
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Tailwind CSS" size={11} /> Tailwind CSS
+                </span>
+                <span className="pctag">
+                  <TechIcon name="NestJS" size={11} /> NestJS
+                </span>
+                <span className="pctag">
+                  <TechIcon name="PostgreSQL" size={11} /> PostgreSQL
+                </span>
+                <span className="pctag">
+                  <TechIcon name="JWT Auth" size={11} /> JWT Auth
+                </span>
               </div>
               <div className="pc-footer">
                 <span className="pc-badge">🏆 Alura Latam Hackathon</span>
                 <div className="project-links">
-                  <a className="plink" href="https://github.com/anchundiatech/E-Learning-Platform" target="_blank">GITHUB ↗</a>
+                  <a
+                    className="plink"
+                    href="https://github.com/anchundiatech/E-Learning-Platform"
+                    target="_blank"
+                  >
+                    GITHUB ↗
+                  </a>
                 </div>
               </div>
             </div>
@@ -379,19 +505,31 @@ export default function Home() {
               </div>
               <div className="pc-num">002</div>
               <div className="pc-title">LatamLink Pay</div>
-              <div className="pc-desc">
-                {t.projects.desc2}
-              </div>
+              <div className="pc-desc">{t.projects.desc2}</div>
               <div className="pc-stack">
-                <span className="pctag"><TechIcon name="React" size={11} /> React</span>
-                <span className="pctag"><TechIcon name="Solana" size={11} /> Solana</span>
-                <span className="pctag"><TechIcon name="Web3.js" size={11} /> Web3.js</span>
-                <span className="pctag"><TechIcon name="TypeScript" size={11} /> TypeScript</span>
+                <span className="pctag">
+                  <TechIcon name="React" size={11} /> React
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Solana" size={11} /> Solana
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Web3.js" size={11} /> Web3.js
+                </span>
+                <span className="pctag">
+                  <TechIcon name="TypeScript" size={11} /> TypeScript
+                </span>
               </div>
               <div className="pc-footer">
                 <span className="pc-badge">🌐 Solana Latam Labs</span>
                 <div className="project-links">
-                  <a className="plink" href="https://frontend-latam-link.vercel.app/" target="_blank">DEMO ↗</a>
+                  <a
+                    className="plink"
+                    href="https://frontend-latam-link.vercel.app/"
+                    target="_blank"
+                  >
+                    DEMO ↗
+                  </a>
                 </div>
               </div>
             </div>
@@ -402,7 +540,7 @@ export default function Home() {
                 cardsRef.current[2] = el;
               }}
             >
-               <div className="pc-img">
+              <div className="pc-img">
                 <Image
                   src="/proyects/gitmood.png"
                   alt="GitMood"
@@ -413,18 +551,28 @@ export default function Home() {
               </div>
               <div className="pc-num">003</div>
               <div className="pc-title">GitMood</div>
-              <div className="pc-desc">
-                {t.projects.desc3}
-              </div>
+              <div className="pc-desc">{t.projects.desc3}</div>
               <div className="pc-stack">
-                <span className="pctag"><TechIcon name="Next.js" size={11} /> Next.js</span>
-                <span className="pctag"><TechIcon name="GitHub API" size={11} /> GitHub API</span>
-                <span className="pctag"><TechIcon name="Tailwind" size={11} /> Tailwind</span>
+                <span className="pctag">
+                  <TechIcon name="Next.js" size={11} /> Next.js
+                </span>
+                <span className="pctag">
+                  <TechIcon name="GitHub API" size={11} /> GitHub API
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Tailwind" size={11} /> Tailwind
+                </span>
               </div>
               <div className="pc-footer">
                 <span className="pc-badge">Personal</span>
                 <div className="project-links">
-                  <a className="plink" href="https://github.com/anchundiatech/GitMood" target="_blank">GitHub ↗</a>
+                  <a
+                    className="plink"
+                    href="https://github.com/anchundiatech/GitMood"
+                    target="_blank"
+                  >
+                    GitHub ↗
+                  </a>
                 </div>
               </div>
             </div>
@@ -435,7 +583,7 @@ export default function Home() {
                 cardsRef.current[3] = el;
               }}
             >
-               <div className="pc-img">
+              <div className="pc-img">
                 <Image
                   src="/proyects/MediLink.png"
                   alt="MediLink"
@@ -446,18 +594,28 @@ export default function Home() {
               </div>
               <div className="pc-num">004</div>
               <div className="pc-title">MediLink</div>
-              <div className="pc-desc">
-                {t.projects.desc5}
-              </div>
+              <div className="pc-desc">{t.projects.desc5}</div>
               <div className="pc-stack">
-                <span className="pctag"><TechIcon name="React" size={11} /> React</span>
-                <span className="pctag"><TechIcon name="Vite" size={11} /> Vite</span>
-                <span className="pctag"><TechIcon name="Tailwind" size={11} /> Tailwind</span>
+                <span className="pctag">
+                  <TechIcon name="React" size={11} /> React
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Vite" size={11} /> Vite
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Tailwind" size={11} /> Tailwind
+                </span>
               </div>
               <div className="pc-footer">
                 <span className="pc-badge">🩺 HealthTech</span>
                 <div className="project-links">
-                  <a className="plink" href="https://github.com/anchundiatech/MediLink-Frontend" target="_blank">GitHub ↗</a>
+                  <a
+                    className="plink"
+                    href="https://github.com/anchundiatech/MediLink-Frontend"
+                    target="_blank"
+                  >
+                    GitHub ↗
+                  </a>
                 </div>
               </div>
             </div>
@@ -468,7 +626,7 @@ export default function Home() {
                 cardsRef.current[4] = el;
               }}
             >
-               <div className="pc-img">
+              <div className="pc-img">
                 <Image
                   src="/proyects/Nexum.png"
                   alt="Nexum"
@@ -479,19 +637,31 @@ export default function Home() {
               </div>
               <div className="pc-num">005</div>
               <div className="pc-title">Nexum</div>
-              <div className="pc-desc">
-                {t.projects.desc6}
-              </div>
+              <div className="pc-desc">{t.projects.desc6}</div>
               <div className="pc-stack">
-                <span className="pctag"><TechIcon name="Rust" size={11} /> Rust</span>
-                <span className="pctag"><TechIcon name="Anchor" size={11} /> Anchor</span>
-                <span className="pctag"><TechIcon name="Solana" size={11} /> Solana</span>
-                <span className="pctag"><TechIcon name="React" size={11} /> React</span>
+                <span className="pctag">
+                  <TechIcon name="Rust" size={11} /> Rust
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Anchor" size={11} /> Anchor
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Solana" size={11} /> Solana
+                </span>
+                <span className="pctag">
+                  <TechIcon name="React" size={11} /> React
+                </span>
               </div>
               <div className="pc-footer">
                 <span className="pc-badge">⚓ WayLearn Bootcamp</span>
                 <div className="project-links">
-                  <a className="plink" href="https://github.com/anchundiatech/NeXum" target="_blank">GitHub ↗</a>
+                  <a
+                    className="plink"
+                    href="https://github.com/anchundiatech/NeXum"
+                    target="_blank"
+                  >
+                    GitHub ↗
+                  </a>
                 </div>
               </div>
             </div>
@@ -513,14 +683,20 @@ export default function Home() {
               </div>
               <div className="pc-num">006</div>
               <div className="pc-title">BlackBox Fleet</div>
-              <div className="pc-desc">
-                {t.projects.desc4}
-              </div>
+              <div className="pc-desc">{t.projects.desc4}</div>
               <div className="pc-stack">
-                <span className="pctag"><TechIcon name="React" size={11} /> React</span>
-                <span className="pctag"><TechIcon name="Vite" size={11} /> Vite</span>
-                <span className="pctag"><TechIcon name="TypeScript" size={11} /> TypeScript</span>
-                <span className="pctag"><TechIcon name="Tailwind" size={11} /> Tailwind</span>
+                <span className="pctag">
+                  <TechIcon name="React" size={11} /> React
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Vite" size={11} /> Vite
+                </span>
+                <span className="pctag">
+                  <TechIcon name="TypeScript" size={11} /> TypeScript
+                </span>
+                <span className="pctag">
+                  <TechIcon name="Tailwind" size={11} /> Tailwind
+                </span>
               </div>
               <div className="pc-footer">
                 <span
@@ -530,11 +706,16 @@ export default function Home() {
                   ● Live
                 </span>
                 <div className="project-links">
-                  <a className="plink" href="https://github.com/anchundiatech/i006-blackbox-fullstack-" target="_blank">GitHub ↗</a>
+                  <a
+                    className="plink"
+                    href="https://github.com/anchundiatech/i006-blackbox-fullstack-"
+                    target="_blank"
+                  >
+                    GitHub ↗
+                  </a>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -543,7 +724,6 @@ export default function Home() {
       <div style={{ borderTop: "1px solid var(--color-border)" }}>
         <div className="section reveal" id="skills">
           <div className="section-header">
-
             <h2 className="section-title">{t.skills.title}</h2>
           </div>
 
@@ -580,12 +760,11 @@ export default function Home() {
           <div className="contact-wrap">
             <span className="contact-eyebrow">{t.contact.eyebrow}</span>
             <h2 className="contact-title">
-              {t.contact.title1}<br />
+              {t.contact.title1}
+              <br />
               <em>{t.contact.title2}</em> {t.contact.title3}
             </h2>
-            <p className="contact-sub">
-              {t.contact.desc}
-            </p>
+            <p className="contact-sub">{t.contact.desc}</p>
             <div className="social-links">
               <a
                 className="social-link"
@@ -595,13 +774,27 @@ export default function Home() {
               >
                 <GithubIcon size={20} />
               </a>
-              <a className="social-link" href="https://www.linkedin.com/in/alejandro-anchundia/" target="_blank" aria-label="LinkedIn">
+              <a
+                className="social-link"
+                href="https://www.linkedin.com/in/alejandro-anchundia/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
                 <LinkedinIcon size={20} />
               </a>
-              <a className="social-link" href="https://x.com/alejo_dev1" target="_blank" aria-label="X">
+              <a
+                className="social-link"
+                href="https://x.com/andiadev"
+                target="_blank"
+                aria-label="X"
+              >
                 <XIcon size={20} />
               </a>
-              <a className="social-link" href="mailto:armandoanchundiayela@gmail.com" aria-label="Email">
+              <a
+                className="social-link"
+                href="mailto:armandoanchundiayela@gmail.com"
+                aria-label="Email"
+              >
                 <Mail size={20} />
               </a>
             </div>
