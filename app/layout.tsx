@@ -22,136 +22,47 @@ const sans = DM_Sans({
   variable: "--font-sans",
 });
 
-const TITLE = "Alejandro Anchundia — Frontend Developer & Web3 Developer";
-
-const DESCRIPTION =
-  "Portfolio profesional de Alejandro Anchundia, frontend developer especializado en React, TypeScript, Tailwind CSS y ecosistemas Web3 en Solana. Explora proyectos reales, habilidades técnicas y experiencia en desarrollo de software.";
-
-const SHORT_DESCRIPTION =
-  "Portfolio profesional especializado en React, TypeScript y ecosistemas Web3 en Solana.";
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-
-  title: TITLE,
-  description: DESCRIPTION,
-
+  title: {
+    default: "Alejandro Anchundia | Portafolio — Frontend & Web3 Developer",
+    template: "%s",
+  },
+  description:
+    "Portfolio profesional de Alejandro Anchundia, frontend developer especializado en React, TypeScript, Tailwind CSS y ecosistemas Web3 en Solana.",
   icons: {
     icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
-
-  authors: [
-    {
-      name: "Alejandro Anchundia",
-      url: SITE_URL,
-    },
-  ],
-
-  creator: "Alejandro Anchundia",
-
-  category: "technology",
-
-  openGraph: {
-    title: TITLE,
-    description: SHORT_DESCRIPTION,
-    url: SITE_URL,
-    siteName: "Alejandro Anchundia",
-    locale: "es_EC",
-    type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: TITLE,
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: TITLE,
-    description: SHORT_DESCRIPTION,
-    creator: "@andiadev",
-    images: ["/og-image.png"],
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
-
   alternates: {
     canonical: SITE_URL,
-  },
-
-  verification: {
-    google: "X5sJOVYux6OMzZ32Uubae-ch_V7-UmsO-U4oplPaSps",
+    languages: {
+      es: `${SITE_URL}/es`,
+      en: `${SITE_URL}/en`,
+    },
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-
-    name: "Alejandro Anchundia",
-
-    url: SITE_URL,
-
-    image: `${SITE_URL}/unnamed.png`,
-
-    description: DESCRIPTION,
-
-    jobTitle: "Frontend Developer & Web3 Developer",
-
-    knowsAbout: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Solana",
-      "Next.js",
-      "Web3",
-      "Rust",
-    ],
-
-    sameAs: [
-      "https://github.com/anchundiatech",
-      "https://www.linkedin.com/in/alejandro-anchundia/",
-      "https://x.com/andiadev",
-    ],
-  };
-
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="es"
+      suppressHydrationWarning
       className={`${serif.variable} ${mono.variable} ${sans.variable}`}
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
       </head>
-
-      <body>{children}</body>
-
-      <GoogleTagManager gtmId="GTM-KHTLV2DC" />
-      <GoogleAnalytics gaId="G-8SYE9NF1EG" />
+      <body>
+        {children}
+        <GoogleTagManager gtmId="GTM-KHTLV2DC" />
+        <GoogleAnalytics gaId="G-8SYE9NF1EG" />
+      </body>
     </html>
   );
 }
-
