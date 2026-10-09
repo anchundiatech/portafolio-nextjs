@@ -122,7 +122,7 @@ const translations = {
     },
     skills: { title: "Skills", frontend: "Frontend", web3: "Web3 & Backend" },
     contact: {
-      eyebrow: " · Contacto",
+      title: "  Contacto",
       title1: "¿Tienes un",
       title2: "proyecto",
       title3: "en mente?",
@@ -177,7 +177,7 @@ const translations = {
       web3: "Web3 & Backend",
     },
     contact: {
-      eyebrow: "04 · Contact",
+      title: "Contact",
       title1: "Have a",
       title2: "project",
       title3: "in mind?",
@@ -324,6 +324,7 @@ export default function Home() {
             alt="Foto de perfil de Alejandro Anchundia - Desarrollador Frontend y Web3"
             fill
             sizes="50vw"
+            quality={100}
             priority
           />
         </div>
@@ -402,10 +403,10 @@ export default function Home() {
             <div>
               <div className="stack-title">{t.about.stack}</div>
               <div className="stack-grid">
-                <div className="stack-item">
+                <h3 className="stack-item">
                   <Code2 size={14} className="stack-icon" />
                   React / JSX
-                </div>
+                </h3>
                 <div className="stack-item">
                   <FileCode size={14} className="stack-icon" />
                   TypeScript
@@ -793,9 +794,11 @@ export default function Home() {
 
       {/* CONTACT */}
       <div style={{ borderTop: "1px solid var(--color-border)" }}>
-        <section className="section reveal" id="contact">
+        <section className="section reveal contact-section" id="contact">
+          <div className="contact-heading">
+            <h2 className="section-title">{t.contact.title}</h2>
+          </div>
           <div className="contact-wrap">
-            <span className="contact-eyebrow">{t.contact.eyebrow}</span>
             <h2 className="contact-title">
               {t.contact.title1}
               <br />
@@ -844,7 +847,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer>
-        <span>© 2026 · Alejandro Anchundia</span>
+        <span>© 2026 Alejandro Anchundia</span>
         <span>{t.footer.phrase}</span>
       </footer>
     </>
