@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 import {
   Code2,
   FileCode,
@@ -127,6 +128,13 @@ const translations = {
       title2: "proyecto",
       title3: "en mente?",
       desc: "Estoy abierto a roles full-time, freelance y colaboraciones en proyectos interesantes. Respondo en menos de 24 horas.",
+      formName: "Nombre",
+      formEmail: "Correo electrónico",
+      formMessage: "Mensaje",
+      formSend: "Enviar mensaje",
+      formSending: "Enviando...",
+      formSuccess: "Mensaje enviado. Gracias por escribirme.",
+      formError: "No se pudo enviar el mensaje. Inténtalo de nuevo.",
     },
     footer: {
       phrase:
@@ -182,6 +190,13 @@ const translations = {
       title2: "project",
       title3: "in mind?",
       desc: "I'm open to full-time roles, freelance and collaborations on interesting projects. I respond within 24 hours.",
+      formName: "Name",
+      formEmail: "Email address",
+      formMessage: "Message",
+      formSend: "Send message",
+      formSending: "Sending...",
+      formSuccess: "Message sent. Thanks for reaching out.",
+      formError: "Your message could not be sent. Please try again.",
     },
     footer: {
       phrase:
@@ -806,6 +821,17 @@ export default function Home() {
             </h2>
             <div className="contact-details">
               <p className="contact-sub">{t.contact.desc}</p>
+              <ContactForm
+                labels={{
+                  name: t.contact.formName,
+                  email: t.contact.formEmail,
+                  message: t.contact.formMessage,
+                  send: t.contact.formSend,
+                  sending: t.contact.formSending,
+                  success: t.contact.formSuccess,
+                  error: t.contact.formError,
+                }}
+              />
               <div className="social-links">
                 <a
                   className="social-link"
