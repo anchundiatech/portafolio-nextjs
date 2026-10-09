@@ -825,6 +825,138 @@ nav {
   line-height: 1.7;
 }
 
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contact-field label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  padding: 0.875rem 1rem;
+  background: color-mix(in srgb, var(--color-bg2) 72%, var(--color-surface));
+  color: var(--color-mist);
+  font: 400 14px/1.5 var(--font-sans);
+  caret-color: var(--color-frost);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s;
+}
+
+.contact-field input {
+  min-height: 50px;
+}
+
+.contact-field input:hover,
+.contact-field textarea:hover {
+  border-color: color-mix(in srgb, var(--color-jun) 65%, var(--color-border));
+}
+
+.contact-field textarea {
+  min-height: 150px;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: var(--color-dim);
+  opacity: 0.72;
+}
+
+.contact-field input:focus-visible,
+.contact-field textarea:focus-visible {
+  outline: none;
+  border-color: var(--color-jun);
+  background: var(--color-surface);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-jun) 20%, transparent);
+}
+
+.contact-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  justify-self: start;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-jun);
+  border-radius: 2px;
+  background: var(--color-jun);
+  color: var(--color-bg);
+  font: 500 11px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    opacity 0.2s;
+}
+
+.contact-submit:hover:not(:disabled) {
+  border-color: var(--color-frost);
+  background: var(--color-frost);
+}
+
+.contact-submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.contact-submit-icon.is-spinning {
+  animation: contact-spin 0.9s linear infinite;
+}
+
+@keyframes contact-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.contact-form-status {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--color-dim);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.contact-form-status.is-success {
+  color: var(--color-frost);
+}
+.contact-form-status.is-error {
+  color: var(--color-amber);
+}
+
 .social-links {
   display: flex;
   justify-content: flex-start;
