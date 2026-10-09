@@ -782,27 +782,6 @@ nav {
 }
 
 /*  CONTACT  */
-#contact.contact-section {
-  display: grid;
-  grid-template-columns: minmax(120px, 0.4fr) minmax(0, 1.6fr);
-  align-items: start;
-  gap: clamp(2rem, 6vw, 6rem);
-}
-
-.contact-heading {
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--color-jun);
-}
-
-.contact-heading .section-title {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--color-jun);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
 .contact-wrap {
   max-width: none;
   margin: 0;
@@ -810,6 +789,11 @@ nav {
   grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
+}
+
+.contact-details {
+  padding-left: clamp(1.5rem, 4vw, 4rem);
+  border-left: 1px solid var(--color-border);
 }
 
 .contact-eyebrow {
@@ -991,16 +975,14 @@ footer a {
   .social-links {
     gap: 1rem;
   }
-  #contact.contact-section {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .contact-heading {
-    width: fit-content;
-  }
   .contact-wrap {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .contact-details {
+    padding: 1.5rem 0 0;
+    border-top: 1px solid var(--color-border);
+    border-left: 0;
   }
   .contact-sub {
     margin-bottom: 1.5rem;
