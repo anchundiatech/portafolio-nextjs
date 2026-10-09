@@ -16,6 +16,13 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Contact Form
+
+The contact form sends messages through the Resend API. Copy `.env.example` to
+`.env.local` and set `RESEND_API_KEY` and `RESEND_FROM_EMAIL`. The sender address
+must use a domain verified in Resend. `CONTACT_EMAIL` is optional and defaults
+to the portfolio owner's email address.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
