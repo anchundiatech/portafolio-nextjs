@@ -122,7 +122,7 @@ const translations = {
     },
     skills: { title: "Skills", frontend: "Frontend", web3: "Web3 & Backend" },
     contact: {
-      title: "  Contacto",
+      title: "Contacto",
       title1: "¿Tienes un",
       title2: "proyecto",
       title3: "en mente?",
@@ -794,8 +794,8 @@ export default function Home() {
 
       {/* CONTACT */}
       <div style={{ borderTop: "1px solid var(--color-border)" }}>
-        <section className="section reveal contact-section" id="contact">
-          <div className="contact-heading">
+        <section className="section reveal" id="contact">
+          <div className="section-header">
             <h2 className="section-title">{t.contact.title}</h2>
           </div>
           <div className="contact-wrap">
@@ -804,42 +804,44 @@ export default function Home() {
               <br />
               <em>{t.contact.title2}</em> {t.contact.title3}
             </h2>
-            <p className="contact-sub">{t.contact.desc}</p>
-            <div className="social-links">
-              <a
-                className="social-link"
-                href="https://github.com/anchundiatech"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Perfil de GitHub de Alejandro Anchundia"
-              >
-                <GithubIcon size={20} />
-              </a>
-              <a
-                className="social-link"
-                href="https://www.linkedin.com/in/alejandro-anchundia/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Perfil de LinkedIn de Alejandro Anchundia"
-              >
-                <LinkedinIcon size={20} />
-              </a>
-              <a
-                className="social-link"
-                href="https://x.com/andiadev"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Perfil en X (Twitter) de Alejandro Anchundia"
-              >
-                <XIcon size={20} />
-              </a>
-              <a
-                className="social-link"
-                href="mailto:armandoanchundiayela@gmail.com"
-                aria-label="Enviar correo electrónico directo"
-              >
-                <Mail size={20} />
-              </a>
+            <div className="contact-details">
+              <p className="contact-sub">{t.contact.desc}</p>
+              <div className="social-links">
+                <a
+                  className="social-link"
+                  href="https://github.com/anchundiatech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Perfil de GitHub de Alejandro Anchundia"
+                >
+                  <GithubIcon size={20} />
+                </a>
+                <a
+                  className="social-link"
+                  href="https://www.linkedin.com/in/alejandro-anchundia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Perfil de LinkedIn de Alejandro Anchundia"
+                >
+                  <LinkedinIcon size={20} />
+                </a>
+                <a
+                  className="social-link"
+                  href="https://x.com/andiadev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Perfil en X (Twitter) de Alejandro Anchundia"
+                >
+                  <XIcon size={20} />
+                </a>
+                <a
+                  className="social-link"
+                  href="mailto:armandoanchundiayela@gmail.com"
+                  aria-label="Enviar correo electrónico directo"
+                >
+                  <Mail size={20} />
+                </a>
+              </div>
             </div>
           </div>
         </section>
