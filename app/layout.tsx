@@ -25,7 +25,7 @@ const sans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Alejandro Anchundia | Portafolio — Frontend & Web3 Developer",
+    default: "Alejandro Anchundia | Portafolio - Frontend & Web3 Developer",
     template: "%s",
   },
   description:

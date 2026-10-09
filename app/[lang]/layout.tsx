@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { SITE_URL } from "../config";
 
 const BASE_TITLES = {
-  es: "Alejandro Anchundia | Portafolio — Frontend & Web3 Developer",
-  en: "Alejandro Anchundia | Portfolio — Frontend & Web3 Developer",
+  es: "Alejandro Anchundia | Portafolio - Frontend & Web3 Developer",
+  en: "Alejandro Anchundia | Portfolio - Frontend & Web3 Developer",
 } as const;
 
 const DESCRIPTIONS = {

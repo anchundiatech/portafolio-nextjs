@@ -98,14 +98,14 @@ const translations = {
       stack: "Stack principal",
       github: "GitHub",
       email: "Email",
-      p1: "Soy <strong>Alejandro Anchundia </strong>, frontend developer y Web3 Developer. Me especializo en construir productos digitales con React y TypeScript — desde SaaS hasta protocolos Web3 en Solana.",
+      p1: "Soy <strong>Alejandro Anchundia </strong>, frontend developer y Web3 Developer. Me especializo en construir productos digitales con React y TypeScript - desde SaaS hasta protocolos Web3 en Solana.",
       p2: "Mi enfoque combina <strong>claridad técnica con diseño funcional</strong>. No solo escribo código que funciona, sino interfaces que las personas entienden y disfrutan usar. Cada proyecto es una oportunidad de mejorar tanto la arquitectura como la experiencia.",
-      p3: "Actualmente estoy desarrollando <strong>LatamLink Pay</strong> — un sistema POS de stablecoins en Solana para comerciantes latinoamericanos, aceptado en el programa Solana Latam Labs.",
+      p3: "Actualmente estoy desarrollando <strong>LatamLink Pay</strong> - un sistema POS de stablecoins en Solana para comerciantes latinoamericanos, aceptado en el programa Solana Latam Labs.",
     },
     projects: {
       title: "Proyectos",
       intro:
-        "Una selección de proyectos reales — hackathons, productos en producción y exploración técnica.",
+        "Una selección de proyectos reales - hackathons, productos en producción y exploración técnica.",
       desc1:
         "Plataforma e-learning con dashboards diferenciados por rol, sistema de autenticación completo y arquitectura REST. Ganador del primer lugar en hackathon de No Country.",
       desc2:
@@ -149,14 +149,14 @@ const translations = {
       stack: "Main stack",
       github: "GitHub",
       email: "Email",
-      p1: "I'm <strong>Armando Alejandro Anchundia Yela</strong>, frontend developer based in Orellana, Ecuador. I specialize in building digital products with React and TypeScript — from SaaS to Web3 protocols on Solana.",
+      p1: "I'm <strong>Armando Alejandro Anchundia Yela</strong>, frontend developer based in Orellana, Ecuador. I specialize in building digital products with React and TypeScript - from SaaS to Web3 protocols on Solana.",
       p2: "My approach combines <strong>technical clarity with functional design</strong>. I don't just write code that works, but interfaces people understand and enjoy using. Every project is an opportunity to improve both architecture and experience.",
-      p3: "I'm currently developing <strong>LatamLink Pay</strong> — a stablecoin POS system on Solana for Latin American merchants, accepted into the Solana Latam Labs program.",
+      p3: "I'm currently developing <strong>LatamLink Pay</strong> - a stablecoin POS system on Solana for Latin American merchants, accepted into the Solana Latam Labs program.",
     },
     projects: {
       title: "Projects",
       intro:
-        "A selection of real projects — hackathons, production products and technical exploration.",
+        "A selection of real projects - hackathons, production products and technical exploration.",
       desc1:
         "E-learning platform with role-based dashboards, full auth system and REST architecture. First place winner at No Country hackathon.",
       desc2:
